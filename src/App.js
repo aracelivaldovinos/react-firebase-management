@@ -1,10 +1,10 @@
-import Home from "./comps/Home";
+import Controller from "./comps/Controller";
 
 
 function App() {
   return (
     <div className="App">
-      <Home />
+      <Controller />
     </div>
   );
 }

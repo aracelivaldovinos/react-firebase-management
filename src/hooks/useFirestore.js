@@ -3,21 +3,21 @@ import { useState, useEffect } from 'react';
 import { db } from '../firebase/config';
 
 const useFirestore = (collection) => {
-  const [batches, setBatches] = useState([]);
+  const [docs, setDocs] = useState([]);
 
   useEffect(()=>{
     const unsub = db.collection(collection)
     .onSnapshot((snap)=>{
-      let batches = [];
+      let documents = [];
       snap.forEach(doc =>{
-        batches.push({...doc.data(), id: doc.id})
+        documents.push({...doc.data(), id: doc.id})
       });
-      setBatches(batches);
-      // console.log(batches);
+      setDocs(documents);
+      // console.log(docs);
     });
     return () => unsub();
   }, [collection])
-  return { batches }
+  return { docs }
 }
  
 export default useFirestore;

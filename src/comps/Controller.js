@@ -4,7 +4,7 @@ import BatchList from './BatchList';
 
 const Controller = () => {
 
-  const { docs } = useFirestore('Batches')
+  const { docs } = useFirestore('Batches');
 
   return (
   <div className="controller">

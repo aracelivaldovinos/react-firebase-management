@@ -1,28 +1,33 @@
-import Card from 'react-bootstrap/Card'
+import {Row, Col} from 'react-bootstrap';
 import '../../index.css';
 
 const Employee = (props) => {
   return ( <div className="employee">
-    <Card style={{ width: '18rem'}}>
-        <Card.Header>
-        <div className="manager-initials">
-          <h1>{props.initials}</h1>
-        </div>
-          {props.firstName}
-          {props.lastName}
-        </Card.Header>
-        <Card.Body>
-          <div>
-            Assigned: {props.assigned}
-          </div>
-          <div>
-            Pending: {props.pending}
-          </div>
-          <div>
-            Completed: {props.completed}
-          </div>
-        </Card.Body>
-      </Card>
+       <Row>
+        <Col className="col-header" sm={4}>
+          <Row>
+          <Col>
+            <div className="manager-initials">
+              <h1>{props.initials}</h1>
+            </div>
+          </Col>
+          <Col>
+            {props.firstName}
+            {props.lastName}
+            {props.assignee}
+          </Col>
+          </Row>
+        </Col>
+        <Col className="col-header" sm={2}>
+          {props.cases}
+        </Col >
+        <Col className="col-header" sm={3}>
+          {props.datetime}
+        </Col>
+        <Col className="col-header" sm={2}>
+         {props.instrument}
+        </Col>
+      </Row>
   </div> );
 }
  

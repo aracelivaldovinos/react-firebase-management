@@ -9,12 +9,16 @@ const EditEmployee = () => {
 
   const {docs} = useFirestore('Batches');
   const { id } = useParams();
-  let employee = docs.filter((doc)=> doc.id === id)[0];
+  const employee = docs.filter((doc)=> doc.id === id)[0];
+
+  
+
+
   
   return ( 
   <div className="edit-employee">
     <Sidebar />
-    <div className="employee-info">
+      {employee && <div className="employee-info">
       <div className="employee-fullname">
         <h1>
           {employee.firstname}
@@ -38,7 +42,7 @@ const EditEmployee = () => {
           </div>
         </Col>
       </Row>
-    </div>
+    </div>}
   </div> 
   );
 }

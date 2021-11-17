@@ -2,12 +2,12 @@
 
 .sidebar{
   height: 100%;
-  width: 200px;
+  width: 300px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: rgb(189, 178, 178);
+  background-color: #001219;
   overflow-x: hidden;
   padding-top: 20px;
 }
@@ -35,11 +35,11 @@
 }
 
 .employee-list{
-  margin-left: 210px;
+  margin-left: 310px;
 }
 
 .edit-employee{
-  margin-left: 210px;
+  margin-left: 310px;
 }
 
 .employee-list a{
@@ -51,19 +51,40 @@
   color: black;
 }
 
+/* .employee{
+  width: 960px;
+} */
+
 .employee .manager-initials{
   border-radius: 50%;
   border-style: solid;
   border-color: rgb(105, 105, 204);
   border-width: 5px;
   background-color: #fff; 
-  height: 5em;
-  width: 5em;
+  height: 50px;
+  width: 50px;
 }
 
 .employee .manager-initials h1{
-  line-height: 70px;
+  line-height: 45px;
   text-align: center;
   font-family: 'Bebas Neue', cursive;
   font-size: 36px;
+}
+
+.col-header{
+  border-style: solid;
+  border-color: rgba(216, 216, 219, 0.897);
+  border-width: 1px;
+  padding: 5px;
+}
+
+.add-task{
+  padding: 20px;
+}
+
+.task-btn button{
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgba(235, 235, 238, 0.966);
 }

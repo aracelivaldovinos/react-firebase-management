@@ -7,6 +7,7 @@ import EmployeeList from "./EmployeeList";
 
 const ManagerCont = () => {
   const { docs } = useFirestore('Batches');
+
   const [employee, setEmployee] = useState(null);
 
   const onClickingEdit = (id) =>{

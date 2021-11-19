@@ -1,9 +1,13 @@
 import { useState } from 'react';
 import { db } from '../../firebase/config';
 import {Row, Col} from 'react-bootstrap';
+import useFirestore from "../../hooks/useFirestore";
 
 const AddTask = ({setAddForm, docs}) => {
-  const [timeExist, setTimeExist] = useState(false)
+  const [timeExist, setTimeExist] = useState(false);
+  const { managerDocs } = useFirestore('Manager');
+  
+  console.log(managerDocs)
 
   let datetime = []
   let instrument = []
@@ -37,6 +41,7 @@ const AddTask = ({setAddForm, docs}) => {
       setAddForm(true)
     }
   }
+
   return ( 
   <div className="add-task">
     <form onSubmit={handleSubmit}>

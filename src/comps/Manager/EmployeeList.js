@@ -57,20 +57,11 @@ const[addForm, setAddForm] = useState(false);
         <div key={doc.id}>
           <Link to={`/manager/employee/${doc.id}`}>
           <Employee 
-              firstName = {doc.firstname}
-              lastName = {doc.lastname}
-              assigned = {doc.assigned}
-              pending = {doc.pending}
-              completed = {doc.completed}
-              released = {doc.released}
-              comments = {doc.comments}
-              initials ={doc.initials}
               id = {doc.id}
               assignee = {doc.assignee}
               cases = {doc.cases}
               datetime = {doc.datetime}
               instrument = {doc.instrument}
-
           />
           </Link>
         </div> 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom'
-import { Row, Col } from 'react-bootstrap';
+import { Row, Col} from 'react-bootstrap';
 
 
 import Employee from "./Employee";
@@ -20,7 +20,13 @@ const[addForm, setAddForm] = useState(false);
     <Row>
       <div className="employee-list">
       <Row>
-        <h1>Header</h1>
+        <div className="task-header">
+         <h1>New Case Assignment Flow </h1>
+        </div>
+        <div className="list-links">
+          <p>Task List</p>
+          <p>Calender</p>
+        </div>
       </Row>
       <Row className="add-task">
         <div className="task-btn">
@@ -40,7 +46,7 @@ const[addForm, setAddForm] = useState(false);
         <Col className="col-header" sm={2}>
         Instrument #
         </Col>
-        {addForm && <AddTask setAddForm={setAddForm}/>}
+        {addForm && <AddTask setAddForm={setAddForm} docs={docs}/>}
       </Row>
   
 

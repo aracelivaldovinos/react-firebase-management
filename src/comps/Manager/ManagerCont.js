@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import useFirestore from "../../hooks/useFirestore";
 
-import EmployeeList from "./EmployeeList";
-
+import TaskList from "./TaskList";
 
 
-const ManagerCont = () => {
-  const { docs } = useFirestore('Batches');
+
+const ManagerCont = ({docs, managerDocs}) => {
 
   const [employee, setEmployee] = useState(null);
 
@@ -18,7 +16,7 @@ const ManagerCont = () => {
 
   return ( 
       <div className="manager-controller">
-        <EmployeeList docs={docs} handleEdit = {onClickingEdit}/>
+        <TaskList docs={docs} managerDocs={managerDocs} handleEdit = {onClickingEdit}/>
       </div>
    );
 }

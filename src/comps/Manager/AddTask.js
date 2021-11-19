@@ -1,14 +1,12 @@
 import { useState } from 'react';
 import { db } from '../../firebase/config';
 import {Row, Col} from 'react-bootstrap';
-import useFirestore from "../../hooks/useFirestore";
 
-const AddTask = ({setAddForm, docs}) => {
+
+const AddTask = ({setAddForm, docs, managerDocs}) => {
   const [timeExist, setTimeExist] = useState(false);
-  const { managerDocs } = useFirestore('Manager');
-  
-  console.log(managerDocs)
 
+  
   let datetime = []
   let instrument = []
   docs.forEach((doc)=>{
@@ -50,8 +48,8 @@ const AddTask = ({setAddForm, docs}) => {
         <select
         name="assignee" 
         required>
-          {docs.map((doc)=>(
-            <option>{doc.assignee}</option>
+          {managerDocs[0] && managerDocs[0].employees.map((employee)=>(
+            <option>{employee}</option>
           ))}
         </select>
         

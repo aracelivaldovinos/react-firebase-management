@@ -34,7 +34,7 @@
   font-size: 54px;
 }
 
-.employee-list{
+.task-list{
   margin-left: 310px;
 }
 
@@ -42,12 +42,12 @@
   margin-left: 310px;
 }
 
-.employee-list a{
+.task-list a{
   text-decoration: none;
   color: black;
 }
 
-.employee-list a:hover{
+.task-list a:hover{
   color: black;
 }
 
@@ -87,4 +87,17 @@
   padding: 8px;
   border-radius: 5px;
   background-color: rgba(235, 235, 238, 0.966);
+}
+
+.sidebar .sidebar-links{
+  margin: auto;
+  /* width: 80%; */
+  margin-top: 60%;
+  border-bottom: 1px solid #8b8c89;
+  
+}
+
+.sidebar .sidebar-links p{
+  color: #8b8c89;
+  font-size: 24px;
 }
